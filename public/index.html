@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sad Phonebook - 웹 기반의 전화번호 관리 애플리케이션">
+  <title>Sad Phonebook</title>
+  <script type="module" src="../src/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📱 Sad Phonebook</h1>
+      <p class="subtitle">간단한 전화번호 관리 애플리케이션</p>
+    </header>
+
+    <div id="message" class="message"></div>
+
+    <!-- 폼 섹션 -->
+    <section class="form-section">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="nameInput">이름 *</label>
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="예: 김철수"
+            maxlength="100"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneInput">전화번호 *</label>
+          <input
+            type="tel"
+            id="phoneInput"
+            placeholder="예: 010-1234-5678"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <div class="button-group">
+          <button type="submit" id="submitBtn" class="btn">추가</button>
+          <button type="reset" class="btn btn-reset">초기화</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 테이블 섹션 -->
+    <section class="table-section">
+      <h2>📋 연락처 목록</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>수정</th>
+            <th>삭제</th>
+          </tr>
+        </thead>
+        <tbody id="contactsList">
+          <tr>
+            <td colspan="4" class="no-data">로딩 중...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>
