@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sad Phonebook - 웹 기반의 전화번호 관리 애플리케이션">
   <title>Sad Phonebook</title>
-  <script type="module" src="../src/main.js"></script>
+
+  <script type="module" src="/src/main.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -16,29 +19,16 @@
 
     <div id="message" class="message"></div>
 
-    <!-- 폼 섹션 -->
     <section class="form-section">
       <form id="contactForm">
         <div class="form-group">
           <label for="nameInput">이름 *</label>
-          <input
-            type="text"
-            id="nameInput"
-            placeholder="예: 김철수"
-            maxlength="100"
-            required
-          />
+          <input type="text" id="nameInput" placeholder="예: 김철수" maxlength="100" required />
         </div>
 
         <div class="form-group">
           <label for="phoneInput">전화번호 *</label>
-          <input
-            type="tel"
-            id="phoneInput"
-            placeholder="예: 010-1234-5678"
-            maxlength="20"
-            required
-          />
+          <input type="tel" id="phoneInput" placeholder="예: 010-1234-5678" maxlength="20" required />
         </div>
 
         <div class="button-group">
@@ -48,7 +38,6 @@
       </form>
     </section>
 
-    <!-- 테이블 섹션 -->
     <section class="table-section">
       <h2>📋 연락처 목록</h2>
       <table>
@@ -69,4 +58,5 @@
     </section>
   </div>
 </body>
+
 </html>
